@@ -44,7 +44,7 @@ MAP = {
     "cyanbg": (r"\[\033[46m\]", "\033[46m"),
     "whitebg": (r"\[\033[47m\]", "\033[47m"),
     "defaultbg": (r"\[\033[49m\]", "\033[49m"),
-    "username": (r"\u", getpass.getuser()),
+    "username": (r"\u", [getpass.getuser(), "myname"][-1]),
     "hostname-short": (r"\h", "mycomputer"),
     "hostname-full": (r"\H", "mycomputer.example"),
     "shellname": (r"\v", "bash"),
@@ -76,8 +76,12 @@ def process(string):
         if opened:
             if char == "]":
                 opened = False
-                raw += MAP[escape][0]
-                preview += MAP[escape][1]
+                if escape in MAP:
+                    raw += MAP[escape][0]
+                    preview += MAP[escape][1]
+                else:
+                    raw += "[" + escape + "]"
+                    preview += "[" + escape + "]"
                 continue
             escape += char
         else:

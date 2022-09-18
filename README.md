@@ -27,3 +27,9 @@ Press enter to insert selected component.
 You can preview your PS1 at the bottom. Directly copy-paste the generated string (under `Preview:`) to your bashrc and you're done!
 
 Use Ctrl+C to exit
+
+![image](./assets/demo.png)
+![image](./assets/demo2.png)
+
+Supports printable ASCII characters!
+![image](./assets/demo3.png)
