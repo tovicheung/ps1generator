@@ -44,7 +44,7 @@ MAP = {
     "cyanbg": (r"\[\033[46m\]", "\033[46m"),
     "whitebg": (r"\[\033[47m\]", "\033[47m"),
     "defaultbg": (r"\[\033[49m\]", "\033[49m"),
-    "username": (r"\u", [getpass.getuser(), "myname"][-1]),
+    "username": (r"\u", getpass.getuser()),
     "hostname-short": (r"\h", "mycomputer"),
     "hostname-full": (r"\H", "mycomputer.example"),
     "shellname": (r"\v", "bash"),
