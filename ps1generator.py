@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 try:
     from readchar import readkey, key
 except ModuleNotFoundError:

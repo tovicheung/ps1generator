@@ -10,11 +10,6 @@ cd ..
 rm -rf ps1generator
 ```
 
-# Usage
-```
-python3 ps1generator.py
-```
-
 ## Typing mode
 When you first start the script, you'll notice that `Type>` is highlighted. This indicates that typing mode is activated, printable ascii characters can be inserted by typing on keyboard. Backspace is supported too.
 
